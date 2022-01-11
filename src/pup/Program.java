@@ -8,9 +8,9 @@ public class Program {
         Buffer buffer = new Buffer();
         Generator generator = new Generator(buffer);
         Thread thread = new Thread(generator);
-        Converter converter = new Converter(buffer, thread);
+        Converter converter = new Converter(buffer);
         Thread thread2 = new Thread(converter);
-        thread2.setDaemon(true);
+        //thread2.setDaemon(true);
         thread.start();
         thread2.start();
     }

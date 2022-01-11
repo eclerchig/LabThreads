@@ -5,11 +5,9 @@ import java.util.Random;
 
 public class Converter implements Runnable{
     private volatile Buffer buffer;
-    private Thread threadGenerator;
 
-    public Converter(Buffer buffer, Thread thread){
+    public Converter(Buffer buffer){
         this.buffer = buffer;
-        this.threadGenerator = thread;
     }
 
     @Override
